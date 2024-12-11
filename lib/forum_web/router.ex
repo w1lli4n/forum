@@ -18,6 +18,13 @@ defmodule ForumWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/users", PageController, :users
+  end
+
+  scope "/api", ForumWeb do
+    pipe_through :api
+
+    get "/", HelloWorld, :index
   end
 
   # Other scopes may use custom stacks.
