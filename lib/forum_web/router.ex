@@ -25,6 +25,8 @@ defmodule ForumWeb.Router do
     pipe_through :api
 
     get "/", HelloWorld, :index
+
+    resources "/posts", PostController, except: [:new, :edit]
   end
 
   # Other scopes may use custom stacks.
