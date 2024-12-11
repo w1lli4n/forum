@@ -27,6 +27,8 @@ defmodule ForumWeb.Router do
     get "/", HelloWorld, :index
 
     resources "/posts", PostController, except: [:new, :edit]
+
+    resources "/users", UserController, except: [:new, :edit]
   end
 
   # Other scopes may use custom stacks.
